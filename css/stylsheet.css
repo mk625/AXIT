@@ -10,6 +10,7 @@
   --light_gray: #f5f5f5;
   --tLIght: #bdbdbd;
   --orange: #ff8b38;
+  --headingSec: #212121;
 }
 
 * {
@@ -30,11 +31,13 @@
 
 header,
 section,
-footer,
-header p,
-section p,
-footer p {
+footer {
   color: var(--bgBlack);
+}
+
+p{
+  font-size: 14px;
+  color: var(--secondary);
 }
 
 img {
@@ -58,17 +61,69 @@ h4 {
 }
 
 h5 {
+  color: var(--headingSec);
   font-size: 20px;
+}
+
+h6{
+  font-size: 14px;
 }
 
 .btn {
   font-size: 16px;
-  color: var(--white);
   padding: 10px 30px;
-  border: 2px solid var(--white);
   margin: 45px 0 0;
   cursor: pointer;
   transition: 0.5s;
+}
+
+.btn.white{
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.btn.orange{
+  color: var(--white);
+  background-color: var(--orange);
+  border-radius: 6px;
+}
+
+.heading{
+  margin: 0 0 60px;
+}
+
+.heading.center{
+  text-align: center;
+  margin: 0 0 120px;
+}
+
+.heading h5{
+  position: relative;
+}
+
+.heading h1{
+  font-weight: 300;
+  color: var(--headingSec);
+  position: relative;
+}
+
+.heading h5::after, .heading h1::after{
+  content: "";
+  width: 64px;
+  height: 2px;
+  background-color: var(--orange);
+  position: absolute;
+  left: 0;
+  bottom: -26px;
+}
+
+.heading.center h1::after{
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.heading p{
+  margin: 54px 0 0;
 }
 /* \common */
 
@@ -117,7 +172,8 @@ header .menu li a {
 }
 
 .banner p{
-    color: var(--white);
+  font-size: 16px;
+  color: var(--white);
 }
 
 .banner .left_col img {
@@ -179,11 +235,10 @@ header .menu li a {
 }
 
 .banner .right_col .btn {
+  border-radius: 0;
+  color: var(--white);
   border: none;
   margin: 0;
-  padding: 20px 0;
-  background-color: var(--orange);
-  color: var(--white);
 }
 /* \banner */
 
@@ -193,23 +248,267 @@ header .menu li a {
 }
 
 .social .container{
-    display: flex;
-    column-gap: 30px;
+  display: flex;
+  column-gap: 30px;
 }
 
 .social .left_col{
-    width: 40%;
+  width: 40%;
 }
 
 .social .right_col{
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.right_col a{
-    font-size: 42px;
-    color: var(--tLIght);
+.social .right_col a{
+  font-size: 42px;
+  color: var(--tLIght);
 }
 /* \social */
+
+/* effect */
+.effect{
+  padding: 120px 0;
+  background-color: var(--light_gray);
+}
+
+.effect .container{
+  display: flex;
+  align-items: center;
+  column-gap: 100px;
+}
+
+.effect .left_col{
+  display: grid;
+  row-gap: 1px;
+}
+
+.effect .left_col .effect_tab{
+  width: 110px;
+  height: 110px;
+  background-color: var(--tBlack);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.effect .left_col .effect_tab.active{
+  background-color: var(--orange);
+}
+
+.effect .right_col{
+  display: flex;
+  align-items: center;
+  column-gap: 90px;
+}
+
+.effect .right_col .heading {
+  margin: 0 0 50px;
+}
+
+.effect .right_col .heading h5::after{
+  background-color: var(--bg);
+  position: initial;
+}
+
+
+.effect .right_col .tab_content{
+  width: 60%;
+}
+
+.effect .right_col .pic{
+  width: 40%;
+}
+/* \effect */
+
+/* list */
+.list{
+  padding: 100px 0;
+}
+
+.list .container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 160px;
+  align-items: center;
+  position: relative;
+}
+
+.list .right_col .boxes{
+  margin: 50px 0 0;
+  display: grid;
+  row-gap: 40px;
+}
+
+.list .right_col .box{
+  display: flex;
+  column-gap: 30px;
+}
+
+.list .right_col .left_box .icon{
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.list .right_col .left_box i{
+  font-size: 14px;
+  color: var(--orange);
+}
+
+.list .right_col .left_box h6{
+  margin: 0 0 10px;
+}
+/* \list */
+
+/* picture */
+.picture{
+  padding: 75px 0;
+  background-color: var(--light_gray);
+}
+
+.picture .container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 160px;
+}
+
+.picture .left_col p:not(:last-child){
+  margin: 0 0 20px;
+}
+/* \picture */
+
+/* awesome */
+.awesome{
+  padding: 100px 0;
+}
+
+.awesome .cols{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+}
+
+.awesome .col{
+  text-align: center;
+}
+
+.awesome .col i{
+  width: 70px;
+  height: 70px;
+  border: 1px solid var(--orange);
+  border-radius: 50%;
+  font-size: 26px;
+  color: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+}
+
+.awesome .col h5{
+  margin: 0 0 20px;
+}
+/* \awesome */
+
+/* pricing */
+.pricing{
+  padding: 100px 0;
+  background-color: var(--light_gray);
+}
+
+.pricing .cols{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 60px;
+  align-items: flex-end;
+  transition: 1s;
+}
+
+.pricing .col{
+  text-align: center;
+  transition: 1s;
+}
+
+.pricing .col:hover{
+  transition: 1s;
+}
+
+.pricing .col:hover .details{
+  border-top: none;
+  transition: 1s;
+}
+
+.pricing .col:hover .details .info{
+  height: initial;
+  transition: 1s;
+}
+
+.pricing .col .col_heading{
+  padding: 20px 0;
+  background-color: var(--tBlack);
+  border-bottom: 1px solid var(--white);
+}
+
+.pricing .col .col_heading h5{
+  color: var(--white);
+}
+
+.pricing .col .price{
+  padding: 30px 0 20px;
+  background-color: var(--tBlack);
+  color: var(--white);
+}
+
+.pricing .col .price h1{
+  line-height: 0.8;
+  font-size: 96px;
+  margin: 0 0 20px;
+}
+
+.pricing .col .price span{
+  font-size: 34px;
+}
+
+.pricing .col .price h6{
+  font-weight: 500;
+  font-style: italic;
+  color: var(--secondary);
+}
+
+.pricing .col .details{
+  background-color: var(--white);
+  border-top: 5px solid var(--orange);
+}
+
+.pricing .col .details .info{
+  height: 0;
+  background-color: var(--orange);
+}
+
+.pricing .col .details .info h6{
+  color: white;
+  padding: 10px 0;
+}
+
+
+.pricing .col .details li{
+  font-size: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--light_gray);
+  color: var(--secondary);
+}
+
+.pricing .col .details li:last-child{
+  border-bottom: none;
+}
+/* \pricing */
