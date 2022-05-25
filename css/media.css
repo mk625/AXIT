@@ -1,0 +1,17 @@
+@media screen and (max-width: 991px){
+    /* header */
+    header .menu{
+        display: none;
+    }
+    /* \header */
+
+    /* banner */
+    .banner .container{
+        grid-template-columns: 1fr;
+    }
+
+    .banner .right_col{
+        display: none;
+    }
+    /* \banner */
+}
