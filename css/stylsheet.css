@@ -301,11 +301,6 @@ header .menu li a {
   background-color: var(--orange);
 }
 
-.effect .right_col{
-  display: flex;
-  align-items: center;
-  column-gap: 90px;
-}
 
 .effect .right_col .heading {
   margin: 0 0 50px;
@@ -317,7 +312,25 @@ header .menu li a {
 }
 
 
-.effect .right_col .tab_content{
+.effect .right_col .effect_tab_content{
+  display: none;
+  animation: 1s fade;
+}
+
+.effect .right_col .effect_tab_content_in{
+  display: flex;
+  align-items: center;
+  column-gap: 90px;
+}
+
+
+@keyframes fade {
+  0% {
+    opacity: 0.2;
+  }
+}
+
+.effect .right_col .content{
   width: 60%;
 }
 
