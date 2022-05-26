@@ -1,17 +1,52 @@
-@media screen and (max-width: 991px){
+@media screen and (max-width: 991px) {
+
     /* header */
-    header .menu{
+    header .menu {
         display: none;
     }
+
     /* \header */
 
     /* banner */
-    .banner .container{
+    .banner .container {
+        text-align: center;
         grid-template-columns: 1fr;
     }
 
-    .banner .right_col{
+    .banner .right_col {
         display: none;
     }
+
     /* \banner */
+
+    /* social */
+    .social .container {
+        text-align: center;
+        display: grid;
+        row-gap: 20px;
+    }
+
+    .social .left_col {
+        width: 100%;
+    }
+
+    .social .right_col {
+        width: 100%;
+    }
+
+    /* \social */
+
+    /* effect */
+    .effect .container{
+        display: grid;
+        row-gap: 30px;
+    }
+    
+    .effect .left_col{
+        display: flex;
+        max-width: 500px;
+        margin: 0 auto;
+        column-gap: 1px;
+    }
+    /* \effect */
 }
