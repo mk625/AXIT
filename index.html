@@ -20,18 +20,27 @@
     <!-- header -->
     <header>
         <div class="container">
-            <div class="logo">
-                <img src="./images/logo.png" alt="logo" title="logo">
+            <div class="left_col">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="logo" title="logo">
+                </div>
+    
+                <div class="menu_icon" onclick="menuToggle()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
             </div>
 
-            <ul class="menu">
-                <li><a href="#">Features</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-
+            <div class="right_col" id="headerMenu">
+                <ul class="menu">
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+           
         </div>
     </header>
     <!-- \header -->
@@ -40,8 +49,8 @@
 
     <!-- banner -->
     <section class="banner">
-        <div class="container">
-            <div class="left_col">
+        <div class="container cols2">
+            <div class="left_col tCenterS">
                 <img src="./images/logo.png" alt="logo" title="logo">
                 <h1>MODERN AXURE TEMPLATE FOR BEAUTIFUL PROTOTYPES</h1>
                 <p>
@@ -54,7 +63,7 @@
 
             </div>
 
-            <div class="right_col">
+            <div class="right_col noneS">
                 <h4>Try Your <span>FREE</span> Trial Today</h4>
 
                 <form>
@@ -114,7 +123,7 @@
 
 
     <!-- effect -->
-    <section class="effect">
+    <section class="effect bgSec">
         <div class="container">
             <ul class="left_col">
                 <li class="effect_tab" onclick="onTabChange(0)">TAB1</li>
@@ -122,7 +131,7 @@
                 <li class="effect_tab" onclick="onTabChange(2)">TAB3</li>
             </ul>
 
-            <div class="right_col">
+            <div class="right_col tCenterS">
                 <div class="effect_tab_content">
                     <div class="effect_tab_content_in">
                         <div class="content">
@@ -151,6 +160,7 @@
                         <div class="pic">
                             <img src="./images/effect_pic.png" alt="effect">
                         </div>
+
                     </div>
                 </div>
 
@@ -182,6 +192,7 @@
                         <div class="pic">
                             <img src="./images/effect_pic.png" alt="effect">
                         </div>
+                        
                     </div>
                 </div>
 
@@ -225,15 +236,15 @@
 
 
     <!-- list -->
-    <section class="list">
-        <div class="container">
-            <div class="left_col">
+    <section class="list noBgSec">
+        <div class="container cols2">
+            <div class="left_col noneS">
                 <div class="pic">
                     <img src="./images/list_left.png" alt="list_img">
                 </div>
             </div>
 
-            <div class="right_col">
+            <div class="right_col ">
                 <div class="heading">
                     <h5>Sub list section</h1>
                 </div>
@@ -290,9 +301,9 @@
 
 
     <!-- picture -->
-    <section class="picture">
-        <div class="container">
-            <div class="left_col">
+    <section class="picture bgSec">
+        <div class="container cols2">
+            <div class="left_col tCenterS">
                 <div class="heading">
                     <h5>Standard Picture Section</h5>
                 </div>
@@ -311,7 +322,7 @@
 
             </div>
 
-            <div class="right_col">
+            <div class="right_col noneS">
                 <div class="pic">
                     <img src="./images/picture_right.png" alt="picture">
                 </div>
@@ -324,14 +335,14 @@
 
 
     <!-- awesome -->
-    <section class="awesome">
+    <section class="awesome noBgSec">
         <div class="container">
             <div class="heading center">
                 <h1>WHY THIS IS AWESOME</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
 
-            <div class="cols">
+            <div class="cols cols3">
                 <div class="col">
                     <i class="fa-regular fa-lightbulb"></i>
                     <h5>Thoughtful Design</h5>
@@ -371,14 +382,14 @@
 
 
     <!-- pricing -->
-    <section class="pricing">
+    <section class="pricing bgSec">
         <div class="container">
             <div class="heading center">
                 <h1>PRICING OPTION</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
 
-            <div class="cols">
+            <div class="cols cols3">
                 <div class="col">
                     <div class="col_heading">
                         <h5>Basic</h5>
@@ -472,7 +483,7 @@
 
 
     <!-- testimonial -->
-    <section class="testimonial">
+    <section class="testimonial noBgSec">
         <div class="container">
             <div class="heading center">
                 <h1>WHAT OUR CUSTOMERS ARE SAYING</h1>
@@ -637,14 +648,14 @@
 
 
     <!-- contact -->
-    <section class="contact">
+    <section class="contact noBgSec tCenterS">
         <div class="container">
             <div class="heading center">
                 <h1>CONTACT US</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
 
-            <form>
+            <form class="cols2">
                 <div class="left_form">
                     <div class="form_group">
                         <input type="text" class="form_control" placeholder="Name">
