@@ -40,15 +40,26 @@ section.noBgSec {
   padding: 120px 0;
 }
 
+.overlay{
+  position: relative;
+  z-index: 1;
+}
+
+.overlay::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
 header,
 section,
 footer {
   color: var(--bgBlack);
-}
-
-p {
-  font-size: 14px;
-  color: var(--secondary);
 }
 
 img {
@@ -60,6 +71,12 @@ img {
 
 span {
   display: inline-block;
+}
+
+p {
+  font-size: 14px;
+  color: var(--secondary);
+  line-height: 1.5;
 }
 
 a {
@@ -77,10 +94,12 @@ h4 {
 h5 {
   color: var(--headingSec);
   font-size: 20px;
+  margin: 0 0 24px;
 }
 
 h6 {
   font-size: 14px;
+  margin: 0 0 6px;
 }
 
 .btn {
@@ -107,16 +126,17 @@ h6 {
 }
 
 .heading {
-  margin: 0 0 60px;
+  margin: 0 0 30px;
 }
 
 .heading.center {
   text-align: center;
-  margin: 0 0 120px;
+  margin: 0 0 60px;
 }
 
 .heading h5 {
   position: relative;
+  margin: 0;
 }
 
 .heading h1 {
@@ -133,7 +153,7 @@ h6 {
   background-color: var(--orange);
   position: absolute;
   left: 0;
-  bottom: -26px;
+  bottom: -18px;
 }
 
 .heading.center h1::after {
@@ -142,7 +162,7 @@ h6 {
 }
 
 .heading p {
-  margin: 54px 0 0;
+  margin: 42px 0 0;
 }
 
 .form_control {
@@ -240,7 +260,8 @@ header .menu_icon i{
 
 .banner p {
   font-size: 16px;
-  color: var(--white);
+  color: var(--tLIght);
+  font-weight: 300;
 }
 
 .banner .left_col img {
@@ -271,7 +292,8 @@ header .menu_icon i{
 }
 
 .banner .right_col {
-  border-radius: 10px;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .banner .right_col h4 {
@@ -307,11 +329,16 @@ header .menu_icon i{
 
 .social .container {
   display: flex;
-  column-gap: 30px;
+  column-gap: 40px;
+  justify-content: center;
 }
 
 .social .left_col {
   width: 40%;
+}
+
+.social .left_col h5{
+  margin: 0 0 4px;
 }
 
 .social .right_col {
@@ -368,11 +395,7 @@ header .menu_icon i{
   background-color: var(--orange);
 }
 
-.effect .right_col .heading {
-  margin: 0 0 50px;
-}
-
-.effect .right_col .heading h5::after {
+.effect .heading h5::after {
   background-color: var(--bg);
   position: initial;
 }
@@ -477,10 +500,6 @@ header .menu_icon i{
   justify-content: center;
   margin: 0 auto 30px;
 }
-
-.awesome .col h5 {
-  margin: 0 0 20px;
-}
 /* \awesome */
 
 /* pricing */
@@ -506,6 +525,7 @@ header .menu_icon i{
 
 .pricing .col .col_heading h5 {
   color: var(--white);
+  margin: 0;
 }
 
 .pricing .col .price {
@@ -622,9 +642,17 @@ header .menu_icon i{
   text-align: center;
 }
 
+.axure .heading{
+  margin: 0 0 40px;
+}
+
 .axure .heading h1,
 .axure .heading p {
   color: white;
+}
+
+.axure .heading p {
+  font-weight: 300;
 }
 
 .axure .btn {
@@ -633,15 +661,19 @@ header .menu_icon i{
 /* \axure */
 
 /* contact */
-.contact form {
+.contact form .cols2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
 }
 
-.contact form .left_form {
+.contact form  .left_form {
   display: grid;
   row-gap: 30px;
+}
+
+.contact form .btn_group{
+  text-align: center;
 }
 /* \contact */
 

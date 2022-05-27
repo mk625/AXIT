@@ -22,9 +22,11 @@
         <div class="container">
             <div class="left_col">
                 <div class="logo">
-                    <img src="./images/logo.png" alt="logo" title="logo">
+                    <a href="index.html">
+                        <img src="./images/logo.png" alt="logo" title="logo">
+                    </a>
                 </div>
-    
+
                 <div class="menu_icon" onclick="menuToggle()">
                     <i class="fa-solid fa-bars"></i>
                 </div>
@@ -40,7 +42,7 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
-           
+
         </div>
     </header>
     <!-- \header -->
@@ -48,7 +50,7 @@
 
 
     <!-- banner -->
-    <section class="banner">
+    <section class="banner overlay">
         <div class="container cols2">
             <div class="left_col tCenterS">
                 <img src="./images/logo.png" alt="logo" title="logo">
@@ -99,7 +101,7 @@
     <!-- social_media -->
     <section class="social">
         <div class="container">
-            <div class="left_col">
+            <div class="left_col tCenterS">
                 <h5>Social Media</h5>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -192,7 +194,7 @@
                         <div class="pic">
                             <img src="./images/effect_pic.png" alt="effect">
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -246,14 +248,15 @@
 
             <div class="right_col ">
                 <div class="heading">
-                    <h5>Sub list section</h1>
-                </div>
+                    <h5>Sub list section</h5>
 
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                    euismod bibendum laoreet. Proin gravida dolor sit amet lacus
-                    accumsan et viverra justo commodo.
-                </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                        euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+                        accumsan et viverra justo commodo.
+                    </p>
+
+                </div>
 
                 <div class="boxes">
                     <div class="box">
@@ -306,6 +309,7 @@
             <div class="left_col tCenterS">
                 <div class="heading">
                     <h5>Standard Picture Section</h5>
+                    <p></p>
                 </div>
 
                 <p>
@@ -630,12 +634,12 @@
 
 
     <!-- axure -->
-    <section class="axure">
+    <section class="axure overlay">
         <div class="container">
             <div class="heading center">
                 <h1>STYLISH AXURE DESIGN</h1>
                 <p>
-                    Use the sections you need, remove the ones you don't.  Create gorgeous prototypes faster than ever!
+                    Use the sections you need, remove the ones you don't. Create gorgeous prototypes faster than ever!
                 </p>
             </div>
 
@@ -648,36 +652,42 @@
 
 
     <!-- contact -->
-    <section class="contact noBgSec tCenterS">
+    <section class="contact noBgSec">
         <div class="container">
             <div class="heading center">
                 <h1>CONTACT US</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
 
-            <form class="cols2">
-                <div class="left_form">
-                    <div class="form_group">
-                        <input type="text" class="form_control" placeholder="Name">
+            <form>
+                <div class="cols2">
+                    <div class="left_form">
+                        <div class="form_group">
+                            <input type="text" class="form_control" placeholder="Name">
+                        </div>
+    
+                        <div class="form_group">
+                            <input type="email" class="form_control" placeholder="Email">
+                        </div>
+    
+                        <div class="form_group">
+                            <input type="text" class="form_control" placeholder="Subject">
+                        </div>
+    
                     </div>
-
-                    <div class="form_group">
-                        <input type="email" class="form_control" placeholder="Email">
-                    </div>
-
-                    <div class="form_group">
-                        <input type="text" class="form_control" placeholder="Subject">
+    
+                    <div class="right_form">
+                        <textarea placeholder="Message" class="form_control"></textarea>
                     </div>
 
                 </div>
 
-                <div class="right_form">
-                    <textarea placeholder="Message" class="form_control"></textarea>
+                <div class="btn_group">
+                    <input type="submit" value="Send Message" class="btn orange">
                 </div>
 
             </form>
 
-            <input type="submit" value="Send Message" class="btn orange">
 
         </div>
     </section>
@@ -716,7 +726,7 @@
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    
+
     <script src="./js/jquery_script.js"></script>
     <script src="./js/script.js"></script>
     <!-- \scripts -->

@@ -20,37 +20,18 @@
     display: none !important;
   }
 
-  header .container{
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  header .menu_icon{
-    display: block;
-  }
-
-  header .right_col{
-    height: 0;
-    overflow: hidden;
-    transition: 0.5s all;
-  }
-
-  header .menu{
-    padding: 20px 0 0;
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 16px;
-    background-color: var(--bgBlack);
-  }
-
   .heading,
   .heading.center {
-    margin: 0 0 60px;
+    margin: 0 0 40px;
   }
 
-  .banner .left_col h1::after, .heading h5::after {
-    left: 50%;
-    transform: translate(-50%, 0);
+  .heading.center h1::after,
+  .heading h5::after {
+    bottom: -14px;
+  }
+
+  .heading p {
+    margin: 28px 0 0;
   }
 
   .cols3 {
@@ -68,9 +49,42 @@
   }
   /* \common */
 
-  /* banner */
-  .banner .container {
+  /* header */
+  header .container {
+    display: grid;
     grid-template-columns: 1fr;
+  }
+
+  header .menu_icon {
+    display: block;
+  }
+
+  header .right_col {
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s all;
+  }
+
+  header .menu {
+    padding: 20px 0 0;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+    background-color: var(--bgBlack);
+  }
+  /* \header */
+
+  /* banner */
+  .banner .left_col h1 {
+    margin: 0 0 30px;
+  }
+
+  .banner .left_col h1::after,
+  .heading h5::after,
+  .heading h1::after {
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: -16px;
   }
   /* \banner */
 
@@ -85,7 +99,7 @@
   }
 
   .social .right_col {
-    width: 100%;
+    width: min(700px, 100%);
   }
 
   .social .right_col i {
@@ -96,7 +110,7 @@
   /* effect */
   .effect .container {
     display: grid;
-    row-gap: 30px;
+    row-gap: 60px;
   }
 
   .effect .left_col {
@@ -121,15 +135,21 @@
   /* \effect */
 
   /* list */
-  .list .container {
-    grid-template-columns: 1fr;
-  }
-
   .list .heading h5::after {
     left: 0;
     transform: translate(0);
   }
+
+  .list .right_col .box {
+    gap: 20px;
+  }
   /* list */
+
+  /* awesome */
+  .awesome .cols {
+    row-gap: 40px !important;
+  }
+  /* \awesome */
 }
 
 /* mobile */
@@ -146,7 +166,35 @@
   .cols3 {
     grid-template-columns: minmax(auto, 400px) !important;
   }
+
+  p {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 18px;
+    margin: 0 0 18px;
+  }
+
+  h6 {
+    font-size: 13px;
+    margin: 0 0 4px;
+  }
   /* \common */
+
+  /* banner */
+  .banner p {
+    font-size: 14px;
+  }
+  /* \banner */
 
   /* effect */
   .effect .right_col .content {
@@ -157,5 +205,15 @@
     display: none;
   }
   /* \effect */
+
+  /* awesome */
+  .awesome .col i {
+    margin: 0 auto 12px;
+  }
+
+  .awesome .col h5 {
+    margin: 0 0 8px;
+  }
+  /* \awesome */
 }
 /* \mobile */
